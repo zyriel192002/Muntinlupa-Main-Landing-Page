@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muntinlupa National High School</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#006400',
+                        'light-green': '#90EE90',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white text-dark-green shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="/IMG/mnhs.png" alt="MNHS Logo" class="h-8 w-8 mr-3">
+                    <span class="font-bold text-xl">Muntinlupa National High School</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-light-green transition duration-300">HOME</a>
+                    <a href="#about" class="hover:text-light-green transition duration-300">ABOUT</a>
+                    <a href="#admission" class="hover:text-light-green transition duration-300">ADMISSION</a>
+                    <a href="#campus" class="hover:text-light-green transition duration-300">CAMPUS</a>
+                    <a href="#testimonials" class="hover:text-light-green transition duration-300">TESTIMONIALS</a>
+                    <a href="#contact" class="hover:text-light-green transition duration-300">CONTACT US</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-dark-green focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#home" class="block px-3 py-2 text-dark-green hover:bg-light-green hover:text-dark-green rounded-md">HOME</a>
+                    <a href="#about" class="block px-3 py-2 text-dark-green hover:bg-light-green hover:text-dark-green rounded-md">ABOUT</a>
+                    <a href="#admission" class="block px-3 py-2 text-dark-green hover:bg-light-green hover:text-dark-green rounded-md">ADMISSION</a>
+                    <a href="#campus" class="block px-3 py-2 text-dark-green hover:bg-light-green hover:text-dark-green rounded-md">CAMPUS</a>
+                    <a href="#testimonials" class="block px-3 py-2 text-dark-green hover:bg-light-green hover:text-dark-green rounded-md">TESTIMONIALS</a>
+                    <a href="#contact" class="block px-3 py-2 text-dark-green hover:bg-light-green hover:text-dark-green rounded-md">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Home Section with Slideshow -->
+    <section id="home" class="relative text-white py-0 overflow-hidden">
+        <div class="slideshow-container relative h-[76vh] w-full">
+            <div class="slide active bg-[url('../IMG/school.webp')] bg-cover bg-center absolute inset-0"></div>
+            <div class="slide bg-[url('../IMG/img1.jpg')]  bg-cover bg-center absolute inset-0"></div>
+            <div class="slide bg-[url('../IMG/facilities1.webp')]  bg-cover bg-center absolute inset-0"></div>
+            <div class="slide bg-[url('../IMG/facilities2.webp')]  bg-cover bg-center absolute inset-0"></div>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="absolute inset-0 z-10 flex items-center justify-center text-center px-4">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Welcome to Muntinlupa National High School
+                </h1>
+                <p class="text-xl md:text-2xl mb-8">
+                    "where every student thrives"
+                </p>
+                <a href="#about"
+                class="bg-white text-dark-green px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+            <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="0"></button>
+            <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="1"></button>
+            <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="2"></button>
+            <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="3"></button>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark-green mb-8">About Muntinlupa National High School</h2>
+
+            <!-- Collapsible Sections -->
+            <div class="space-y-4">
+                <!-- Brief History -->
+                <details class="bg-white rounded-lg shadow-md">
+                    <summary class="cursor-pointer text-xl font-semibold text-dark-green p-6 hover:bg-gray-50 transition duration-300">
+                        Brief History
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <p class="text-lg mb-4">After sixty long years of its existence, the Muntinlupa National High School has really gone a long way. Established on August 3, 1945 as Muntinlupa High School, this institution has shaped the lives of every individual living in this highly urbanized city of southern Metro Manila.</p>
+                        <h4 class="text-lg font-semibold mb-2">Establishment and Growth</h4>
+                        <p class="mb-4">In July 1945, a couple of years after the Japanese occupation, everything had to be reestablished, reorganized and rehabilitated including the children's educational system.</p>
+                        <p class="mb-4">With the damages brought by the war, many parents in the New Bilibid Prisons Reservation were faced with the problem of how their children could complete high school. The most accessible high schools were in Binan and Manila. Of course travelling at that time was not only expensive and difficult, but it was oftentimes risky. To send their children in Manila high schools would mean cost of board and lodging which was impossible for low-salaried government employees; especially those living in the Prisons reservation.</p>
+                        <p class="mb-4">After a thorough study of the problems faced by many parents and sympathizing with the plights of the idle out-of-school boys and girls, the then Director Eriberto B. Misa and other ranking officials of the Bureau of Prisons considered the establishment of a high school in the reservation.</p>
+                        <p class="mb-4">Thus, on July 17, 1945, they sent a letter to the Office of the Secretary of Instructions and Information, requesting for the opening of public high school within the reservation. This request was immediately approved and from there emerged a new public high school in the vicinity.</p>
+                        <p class="mb-4">Undersecretary Florentino Gayco of the Office of Public Instructions instructed Division Superintendent Vicente Garcia to organize the school with two teachers to start with. Mr. Cesar S. Tiangco was sent to the Prisons reservation to organize classes. A fixed rate of P100 per student was also approved, prior to the P10 monthly basis, as a means of maintaining the proposed school at the beginning.</p>
+                        <p class="mb-4">Children both within the reservation and nearby barangays and the town outside were enrolled. With Mrs. Lourdes Tibayan and Mrs. Catalina Roque, two first year classes were organized and regular sessions started on August 5, 1945.</p>
+                        <p class="mb-4">The classes were housed in a shop of the Prisons Construction Section. Putting up a partition in the middle of the rather long shop formed two rooms. In 1949, four years after those difficult struggling years, the first graduation exercises were held with the Recaida sisters leading the graduates as valedictorian and salutatorian.</p>
+                        <p>With the school population growing steadily, it was seen that the Construction Shop (which served as the school building for ten years) was already inadequate for the school. It was during the incumbent term of Superintendent Javier that the school was required to have a site of its own.</p>
+                        <p class="mb-4">As a standard high school site should be no less than eight hectares, a lot had to be found in an unoccupied area of the reservation. It was the late Mr. Alfredo M. Bunye, then superintendent of the New Bilibid Prisons, who recommended the site now occupied by the school. The area was surveyed in 1951 by a team of the Coast and Geodetic Station, and the Secretary of Education drew papers and the Secretary of Justice reserving to the Muntinlupa High School the 10.5-hectare lot it now occupies.</p>
+                        <p class="mb-4">With the site secured, the next move was to give the school of standard building. Director Eustaquio Balagtas of the Bureau of Prisons made representations with the Senate President Eulogio Rodriguez in 1953 for national aid. As a result, P10,000 was earmarked from the pork barrel fund of the late Congressman Eulogio Rodriguez Jr. under RA No. 920.</p>
+                        <p class="mb-4">On August 15, 1954, during the incumbency of Dir. Bunye as Prisons Director, the construction of the new school building started. Prison labor was utilized. Needed lumber was shipped for the building to be finished. It was inaugurated on August 6, 1955 with appropriate ceremonies at which Governor Isidro Rodriguez and the Director of Public Schools, Benigno Aldana were the principal guests. Thus in the school year 1955-1956, Muntinlupa High School left its old building in lieu of the new one. In that year, there were two sections in the first year, three in the second year, one in the third and two in the fourth year.</p>
+                        <p class="mb-4">At the new site, the school continued to grow in population and plant provincial aid was received yearly in increasing amount. While the school was reestablished by the prisons, it had somehow came to be generally accepted as a regional provincial high school on account of the provincial aid given to it and the supervisory and administrative control exercised over it by the Bureau of Public Schools, particularly then Division Office of Rizal.</p>
+                        <p class="mb-4">Muntinlupa High School then become Muntinlupa National High School in the year 1977 upon the approval of a congressional bill stating that the school be converted into a national secondary school. Seasoned educators have handled the school as its principal</p>
+                        <p class="mb-4">– Mr. Cesar S. Tiangco (1945-1976), Mrs. Marcela B. Ponce (1976-1991), Mr. Felix A. Balbaguio (1991-1995), Dr. Isabelita L. Montesa (1995-2006), Dr. Dominico C. Idanan (April – July 2006) as OIC and presently being managed by Dr. Estrella C. Aseron (August 2006 – present).</p>
+                        <p class="mb-4">From that time on, because of the school's commitment of providing quality education to its populace, enrolments gradually increased from that year onwards. At present, the school boasts of an enrolment of 9510 distributed among the different year levels- First Year- 2789; Second Year- 2879; Third Year- 1882 and the Fourth Year classes with 1960. It produces an estimate of more than two thousand graduates annually.</p>
+                        <p>The school, which had its humble beginnings, through its benevolent, unselfish, industrious employees, faculty members, administrators and benefactors, was able to stand the test of time. Since then, it has become a celebrated institute in Muntinlupa City. (From Amelia D. Hicap – Lopez Files, MHS Batch '65 and Former MNHS Faculty)</p>
+                    </div>
+                </details>
+
+                <!-- Mission -->
+                <details class="bg-white rounded-lg shadow-md">
+                    <summary class="cursor-pointer text-xl font-semibold text-dark-green p-6 hover:bg-gray-50 transition duration-300">
+                        Mission
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <p class="text-lg">We, the stakeholders of Muntinlupa National High School shall relentlessly strive to provide equal and equitable access to quality education that respond to the cultural, environmental, financial, commercial, industrial, technical and technological demands of the progressively thriving City of Muntinlupa.</p>
+                    </div>
+                </details>
+
+                <!-- Vision -->
+                <details class="bg-white rounded-lg shadow-md">
+                    <summary class="cursor-pointer text-xl font-semibold text-dark-green p-6 hover:bg-gray-50 transition duration-300">
+                        Vision
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <p class="text-lg">Muntinlupa National High School is a caring and friendly institution of learning transforming Filipino youths into God-loving, productive and lifelong learners in a technologically driven society strongly supported by all stakeholders.</p>
+                    </div>
+                </details>
+
+                <!-- Core Values -->
+                <details class="bg-white rounded-lg shadow-md">
+                    <summary class="cursor-pointer text-xl font-semibold text-dark-green p-6 hover:bg-gray-50 transition duration-300">
+                        Core Values
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <ul class="space-y-2 text-lg">
+                                <p class="text-lg">MAKADIYOS</p>
+                                <li>• the act of the quality or state of being spiritually pure or virtuous.</li>
+                                <p class="text-lg">MAKAKALIKASAN</p>
+                                <li>• it refers to the ability of man to value our nature or environment.</li>
+                                <p class="text-lg">MAKABANSA</p>
+                                <li>• the act of having full respect for the country.</li>
+                                <p class="text-lg">MAKATAO</p>
+                                <li>• it refers to the concept of valuing the dignity of other as you value your own dignity and rights.</li>
+                            </ul>
+                            <div class="text-center">
+                                <img src="/IMG/corevalues.jpg" alt="Core Values" class="w-full h-auto rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Awards and Achievements -->
+                <details class="bg-white rounded-lg shadow-md">
+                    <summary class="cursor-pointer text-xl font-semibold text-dark-green p-6 hover:bg-gray-50 transition duration-300">
+                        Awards and Achievements
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <a href="https://www.youtube.com/watch?v=YXtivOYriwA" target="_blank">
+                                    <img src="/IMG/award1.webp" alt="NCR Champion 2017" class="w-full h-48 object-cover rounded-lg mb-4">
+                                </a>
+                                <h4 class="text-lg font-semibold mb-2">NCR's Champion on Sustainable and Eco-Friendly School for 2017!</h4>
+                                <p>Recognized as the top sustainable and eco-friendly school in the National Capital Region.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                    <img src="/IMG/award2.jpg" alt="Outstanding Teacher 2016" class="w-full h-48 object-cover rounded-lg mb-4">
+                                <h4 class="text-lg font-semibold mb-2">Congratulations Ma'am Regaele Aranza Olarte, 2016 Metrobank Outstanding Teacher Awardee!</h4>
+                                <p>Honored for exceptional teaching excellence and dedication to education.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                    <img src="/IMG/award3.jpg" alt="Palarong Pambansa 2017" class="w-full h-48 object-cover rounded-lg mb-4">
+                                <h4 class="text-lg font-semibold mb-2">MNHSians Pride ARJAY GRIFALDA captures a gold medal in the PALARONG PAMBANSA 2017</h4>
+                                <p>Achieved gold in the national sports competition, showcasing athletic prowess.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                    <img src="/IMG/award4.webp" alt="Hardwork Discipline Award" class="w-full h-48 object-cover rounded-lg mb-4">
+                                <h4 class="text-lg font-semibold mb-2">The Value of Hardwork and Discipline Appreciation Award</h4>
+                                <p>Recognized for promoting and embodying the values of hard work and discipline.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Section -->
+    <section id="admission" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark-green mb-8">Admission</h2>
+            <div class="space-y-4">
+                <!-- Junior High School -->
+                <details class="bg-white rounded-lg shadow-md">
+                    <summary class="cursor-pointer text-xl font-semibold text-dark-green p-6 hover:bg-gray-50 transition duration-300">
+                        Junior High School
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <h4 class="text-lg font-semibold mb-4">Requirements:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li>Grade 6 Report Card</li>
+                            <li>Certification of Good Moral Character from the School</li>
+                            <li>Photocopy of NSO Birth Certificate / Household Register</li>
+                            <li>Certificate of Graduation / Copy of Diploma</li>
+                            <li>1×1 I.D Picture</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Senior High School -->
+                <details class="bg-white rounded-lg shadow-md">
+                    <summary class="cursor-pointer text-xl font-semibold text-dark-green p-6 hover:bg-gray-50 transition duration-300">
+                        Senior High School
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <h4 class="text-lg font-semibold mb-4">Be part of our family! Soar High Senior High!</h4>
+                        <h4 class="text-lg font-semibold mb-4">Requirements:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li>Grade 10 Report Card</li>
+                            <li>Certification of Good Moral Character from the School</li>
+                            <li>Photocopy of NSO Birth Certificate / Household Register</li>
+                            <li>Certificate of Graduation / Copy of Diploma</li>
+                            <li>1×1 Picture</li>
+                            <li>2×2 picture</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Section -->
+    <section id="campus" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark-green mb-8">Our Facilities</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/IMG/facilities2.webp" alt="Seniorhigh" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Senior High School Building</h3>
+                        <p>Modern classrooms equipped with the latest educational technology.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/IMG/facilities3.webp" alt="Fishpond" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Fishpond</h3>
+                        <p>Aquaculture facility for hands-on learning in fisheries and marine biology.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/IMG/facilities4.jpg" alt="Sports Field" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sports Facilities</h3>
+                        <p>State-of-the-art sports fields and gymnasium for physical education.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark-green mb-12">What Our Students Say</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <div class="flex-grow">
+                        <div class="text-4xl text-light-green mb-4">"</div>
+                        <p class="text-lg text-gray-700 mb-6 italic">"MNHS has provided me with an excellent foundation for my future. The teachers are dedicated and the environment is conducive to learning."</p>
+                        <div class="text-4xl text-light-green text-right -mt-4">"</div>
+                    </div>
+                    <div class="flex items-center mt-6 pt-6 border-t border-gray-200">
+                        <img src="/IMG/icon.png" alt="Student" class="w-14 h-14 rounded-full mr-4 border-2 border-light-green">
+                        <div>
+                            <h4 class="font-bold text-dark-green">Maria Santos</h4>
+                            <p class="text-sm text-gray-600">Class of 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <div class="flex-grow">
+                        <div class="text-4xl text-light-green mb-4">"</div>
+                        <p class="text-lg text-gray-700 mb-6 italic">"The extracurricular activities at MNHS helped me discover my passion for science. I'm grateful for the opportunities provided."</p>
+                        <div class="text-4xl text-light-green text-right -mt-4">"</div>
+                    </div>
+                    <div class="flex items-center mt-6 pt-6 border-t border-gray-200">
+                        <img src="/IMG/icon.png" alt="Student" class="w-14 h-14 rounded-full mr-4 border-2 border-light-green">
+                        <div>
+                            <h4 class="font-bold text-dark-green">Juan dela Cruz</h4>
+                            <p class="text-sm text-gray-600">Class of 2022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <div class="flex-grow">
+                        <div class="text-4xl text-light-green mb-4">"</div>
+                        <p class="text-lg text-gray-700 mb-6 italic">"MNHS not only focuses on academics but also on character building. It's been a transformative experience."</p>
+                        <div class="text-4xl text-light-green text-right -mt-4">"</div>
+                    </div>
+                    <div class="flex items-center mt-6 pt-6 border-t border-gray-200">
+                        <img src="/IMG/icon.png" alt="Student" class="w-14 h-14 rounded-full mr-4 border-2 border-light-green">
+                        <div>
+                            <h4 class="font-bold text-dark-green">Ana Reyes</h4>
+                            <p class="text-sm text-gray-600">Class of 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-16 bg-dark-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Contact Us</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+                    <div class="space-y-4">
+                        <p><strong>Address:</strong> Muntinlupa City, Philippines</p>
+                        <p><strong>Phone:</strong> (02) 123-4567</p>
+                        <p><strong>Email:</strong> info@mnhs.edu.ph</p>
+                        <p><strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 bg-white text-dark-green border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-green focus:border-dark-green">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 bg-white text-dark-green border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-green focus:border-dark-green">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 bg-white text-dark-green border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-green focus:border-dark-green"></textarea>
+                        </div>
+                        <button type="submit" class="bg-white text-dark-green px-6 py-2 rounded-md font-semibold hover:bg-gray-100 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Our Location</h3>
+                <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1234567890123!2d121.0456789!3d14.5678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9abcdef123456%3A0x123456789abcdef!2sUniversity%20Rd%2C%20Poblacion%2C%20Muntinlupa%2C%201776%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1234567890123!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Muntinlupa National High School</h3>
+                    <p class="text-gray-300">University Rd, Poblacion, Muntinlupa, 1776 Metro Manila</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Information</h4>
+                    <p class="text-gray-300 mb-2">Telephone: (02) 550 5211</p>
+                    <p class="text-gray-300">Email: OfficialMNHS@gmail.com</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition">About</a></li>
+                        <li><a href="#admission" class="text-gray-300 hover:text-white transition">Admission</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Muntinlupa National High School. All rights reserved.</p>
+                <p class="text-sm text-gray-400 mt-2">Created by: Zyriel</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/JS/mnhs.js"></script>
+</body>
+</html>
